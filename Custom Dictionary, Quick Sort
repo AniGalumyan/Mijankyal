@@ -15,10 +15,9 @@ let dict1=Dictionary(arr);
 console.log(dict1); 
 
 Quick Sort
-function part(arr,low,high) { 
+function pivotD(arr,low,high) { 
     let pivot=arr[high]; 
     let x=low-1; 
-
     for(let j=low; j<=high-1; j++) { 
         if(arr[j]<pivot) {
             x++; 
@@ -30,7 +29,7 @@ function part(arr,low,high) {
 } 
 function quickSort(arr,low,high) { 
     if (low<high) { 
-        let pi=part(arr,low,high); 
+        let pi=pivotD(arr,low,high); 
         quickSort(arr,low,pi - 1); 
         quickSort(arr,pi + 1,high); 
     } 
