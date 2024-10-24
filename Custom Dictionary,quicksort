@@ -1,0 +1,40 @@
+// Custom Dictionary
+function Dictionary(array){
+let dict={};
+ array.forEach(function(item){
+    if(dict[item]){
+        dict[item]+=1;
+        } else {
+        dict[item] = 1;
+        }
+    });
+    return dict;
+}
+let arr=[56, 76, 'hi', 0, 9];
+let dict1=Dictionary(arr); 
+console.log(dict1); 
+
+Quick Sort
+function part(arr,low,high) { 
+    let pivot=arr[high]; 
+    let x=low-1; 
+
+    for(let j=low; j<=high-1; j++) { 
+        if(arr[j]<pivot) {
+            x++; 
+            [arr[x],arr[j]]=[arr[j],arr[x]]; 
+        } 
+    } 
+    [arr[x+1],arr[high]]=[arr[high],arr[x+1]]; 
+    return x + 1; 
+} 
+function quickSort(arr,low,high) { 
+    if (low<high) { 
+        let pi=part(arr,low,high); 
+        quickSort(arr,low,pi - 1); 
+        quickSort(arr,pi + 1,high); 
+    } 
+} 
+let array = [56, 78, 87, 65, 45, 3, 6, 0, 6, 24, 56]; 
+quickSort(array, 0, array.length - 1); 
+console.log(array);
