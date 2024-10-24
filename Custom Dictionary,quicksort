@@ -10,7 +10,7 @@ let dict={};
     });
     return dict;
 }
-let arr=[56, 76, 'hi', 0, 9];
+let arr=[56, 76, 'hi', 0,56,9];
 let dict1=Dictionary(arr); 
 console.log(dict1); 
 
